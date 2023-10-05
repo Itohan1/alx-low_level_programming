@@ -1,8 +1,8 @@
-#include <studio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
- *
+ i*
  * Return: Always 0 (Success)
  */
 int main(void)
