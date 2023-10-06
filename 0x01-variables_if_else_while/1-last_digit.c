@@ -7,7 +7,7 @@
 /**
  * main - process
  *
- * Return: Transfer
+ * Return: always 0
  */
 int main(void)
 {
