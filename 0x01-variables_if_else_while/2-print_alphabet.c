@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Put characters
+ * main - main character
  *
- * Return : Always (0)
+ * Return: always 0
  */
 
 int main(void)
