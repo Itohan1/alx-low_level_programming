@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - main log
+ * main - main functions
  *
- * Return: Always 0
+ * Return: always 0
  *
  */
 
-Int main(void)
+int main(void)
 {
 	char i;
 
