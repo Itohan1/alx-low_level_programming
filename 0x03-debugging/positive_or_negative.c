@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 
-int positive_or_negative(int i)
+void positive_or_negative(int i)
 {
-	int i;
-
 	if (i > 0)
-		printf("%d is positive\n", i);
+		printf("%d is postive\n", i);
 	else if (i == 0)
 		printf("%d is zero\n", i);
 	else
