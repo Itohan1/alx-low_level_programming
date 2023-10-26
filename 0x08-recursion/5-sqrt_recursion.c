@@ -1,4 +1,6 @@
 #include "main.h"
+
+
 /**
  * _sqrt_recursion -  returns the natural square root of a number
  * @n: first variable
@@ -8,12 +10,24 @@
 
 int _sqrt_recursion(int n)
 {
-	int y = n / y;
-	int _sqrt = y * y;
-
-	if (_sqrt < n)
+	if (n < 0)
 		return (-1);
-	if (_sqrt == n)
+	return (squareroot(n, 0));
+}
+
+/**
+ * squareroot - squareroo of an integer
+ * @n: first variable
+ * @y: second variable
+ * Return: -1, 0
+ *
+ */
+
+int squareroot(int n, int y)
+{
+	if (y * y > n)
+		return (-1);
+	if (y * y == n)
 		return (y);
-	return (_sqrt(n, y + 1));
+	return (squareroot(n, y + 1));
 }

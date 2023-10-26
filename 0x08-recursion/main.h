@@ -11,5 +11,6 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _putchar(char c);
 int prime_number_integer(int n, int y);
+int squareroot(int n, int y);
 
 #endif
