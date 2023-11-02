@@ -3,7 +3,7 @@
 /**
  * malloc_checked - allocates memory using malloc
  * @b: parameter
- * Returns: *p
+ * Return: *p
  *
  */
 
