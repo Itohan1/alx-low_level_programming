@@ -21,7 +21,7 @@ int main(void)
 			putchar(' ');
 			putchar(k + '0');
 			putchar(q + '0');
-			if ((q * k * i * j) - i != 5823)
+			if ((q * k * i * j) - 9 != 5823)
 			{
 				putchar(',');
 				putchar(' ');
