@@ -3,14 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct op;
-int (*get_op_func(char *s))(int, int);
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int main(int __attribute__((unused)) argc, char *argv[])
 void print_name(char *name, void (*f)(char *));
 int _putchar(char c);
 void array_iterator(int *array, size_t size, void (*action)(int));
