@@ -11,7 +11,7 @@
 
 int main(int __attribute__((unused)) argc, char *argv[])
 {
-	int i, j;
+	int num1, num2;
 	char *op;
 
 	if (argc != 4)
@@ -20,9 +20,9 @@ int main(int __attribute__((unused)) argc, char *argv[])
 		exit(98);
 	}
 
-	i = atoi(argv[1]);
+	num1 = atoi(argv[1]);
 	op = argv[2];
-	j = atoi(argv[3]);
+	num2 = atoi(argv[3]);
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
@@ -30,12 +30,12 @@ int main(int __attribute__((unused)) argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*op == '/' && j == 0) || (*op == '%' && j == 0))
+	if ((*op == '/' && num2 == 0) || (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(op)(i, j));
+	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return (0);
 }
