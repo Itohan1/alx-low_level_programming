@@ -14,14 +14,14 @@ int main(void)
 	for (k = 0 ; k <= 9 ; k++)
 	for (q = 1 ; q <= 9 ; q++)
 	{
-		if ((i + j) < (k + q))
+		if (((i + j) < (k + q)) && (i > j))
 		{
 			putchar(i + '0');
 			putchar(j + '0');
 			putchar(' ');
 			putchar(k + '0');
 			putchar(q + '0');
-			if ((i * j * k * q) - i != 5823)
+			if ((i + j) != 17)
 			{
 				putchar(',');
 				putchar(' ');
