@@ -2,6 +2,7 @@
 #define FUNCTION_POINTERS_H
 #include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
 
 int main(int __attribute__((unused)) argc, char *argv[]);
 void print_name(char *name, void (*f)(char *));
