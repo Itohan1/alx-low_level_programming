@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	long n = 612852475143;
-	long j;
+	long int n = 612852475143;
+	long int j;
 
 	while (j != n)
 	{
