@@ -57,10 +57,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 			exit(97);
 	}
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-			exit(97);
-	}
 	b = buf(argv[2]);
 	b = buf(argv[2]);
 	from = open(argv[1], O_RDONLY);
@@ -77,7 +73,7 @@ int main(int argc, char *argv[])
 		wr = write(to, b, r);
 		if (to == -1 || wr == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 			free(b);
 			exit(99);
 		}
