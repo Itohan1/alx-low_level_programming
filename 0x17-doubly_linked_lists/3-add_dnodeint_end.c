@@ -2,7 +2,7 @@
 
 /**
  * add_dnodeint_end - add node at end
- * @head - first element of list
+ * @head: first element of list
  * @n: element
  * Return: address of new element or NULL
  */
