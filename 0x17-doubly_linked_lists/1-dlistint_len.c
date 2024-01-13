@@ -1,12 +1,11 @@
 #include "lists.h"
-
 /**
- * print_dlistint - print list
- * @h: parametr
- * Return: count
+ * dlistint_len - returns the number of elements of a list
+ * @h: parameter
+ * Return: n
  */
 
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int i = 0;
 
@@ -18,7 +17,6 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%d\n", h->n);
 		i++;
 		h = h->next;
 	}
