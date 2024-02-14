@@ -1,10 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * has_table_set - function that adds an element to the hash table
- * ht: first parameter
- * key: parameter for key
- * value: parameter for value
+ * hash_table_set - function that adds an element to the hash table
+ * @ht: first parameter
+ * @key: parameter for key
+ * @value: parameter for value
  * Return: 0 or 1
  */
 
@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	id = key_index((const unsigned char *)key, ht->size);
 	for (i = id; ht->array[i]; i++)
 	{
-		if (strcmp(ht->array[i]->key, key))
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
 			free(ht->array[i]->value);
 			ht->array[i]->value = dup;
