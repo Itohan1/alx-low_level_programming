@@ -2,8 +2,7 @@
 
 /**
  * hash_table_print - print hash tables
- * @j: first parameter
- * @f: flag
+ * @ht: variable
  */
 
 void hash_table_print(const hash_table_t *ht)
