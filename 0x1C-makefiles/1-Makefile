@@ -1,0 +1,11 @@
+CC := gcc
+SRC := $(*wildcards *.c)
+BIN := $(SRC:%.c=%)
+
+all: school
+
+%: %.o
+	${CC} %< -o $@
+
+%.o: %.c
+	${CC} -c %< -o $@
