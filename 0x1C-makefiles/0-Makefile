@@ -1,0 +1,11 @@
+all: school
+
+school: main.o student.o
+	gcc main.o student.o -o school
+	chmod +x school
+
+main.o: main.c
+	gcc -c main.c -o main.o
+
+student.o: student.c
+	gcc -c student.c -o student.o
