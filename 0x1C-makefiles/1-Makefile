@@ -1,6 +1,6 @@
 CC := gcc
 SRC := main.c student.c
-obj := $(src:%.c=o)
+obj := $(src:.c=o)
 
 all: school
 
