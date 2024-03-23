@@ -1,14 +1,11 @@
 CC := gcc
 SRC := main.c student.c
-obj := $(src:.c=o)
+school:= $(src:%.c=%)
 
 all: school
 
-school: $(obj)
-	${CC} ${obj} -o school
+%: %.o
+	${CC} $< -o school
 
 %.o: %.c
-	${CC} -c $< -o $@
-
-clean:
-	rm -f ${obj} school
+	${CC} -c $< -o $
