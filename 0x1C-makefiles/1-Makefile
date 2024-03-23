@@ -1,11 +1,11 @@
 CC := gcc
-SRC := $(*wildcards *.c)
-BIN := $(SRC:%.c=%)
+SRC := main.c student.c
+obj := $(src:%.c=o)
 
 all: school
 
-%: %.o
-	${CC} %< -o $@
+school: $(obj)
+	${CC} ${obj} -o school
 
 %.o: %.c
-	${CC} -c %< -o $@
+	${CC} -c $< -o $@
