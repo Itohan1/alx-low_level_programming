@@ -5,7 +5,7 @@ school:= $(src:%.c=%)
 all: school
 
 %: %.o
-	${CC} $< -o school
+	${CC} $< -o $@
 
 %.o: %.c
-	${CC} -c $< -o $
+	${CC} -c $<
