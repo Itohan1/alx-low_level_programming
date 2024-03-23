@@ -9,3 +9,6 @@ school: $(obj)
 
 %.o: %.c
 	${CC} -c $< -o $@
+
+clean:
+	rm -f ${obj} school
