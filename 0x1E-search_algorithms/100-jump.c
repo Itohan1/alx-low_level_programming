@@ -44,7 +44,7 @@ int jump_search(int *array, size_t size, int value)
 			}
 			while (k > j && array[twice] >= value && array[k] <= value)
 			{
-				if (array[i] == value)
+				if (array[k] == value)
                                 {
                                         return (-1);
                                 }
