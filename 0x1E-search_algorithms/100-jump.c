@@ -50,7 +50,6 @@ int jump_search(int *array, size_t size, int value)
 			{
 				if (value < array[twice])
 				{
-					printf("Value checked array[%d] = [%d]\n", i, array[i]);
 					return (i);
 				}
 				i++;
