@@ -23,7 +23,7 @@ int jump_search(int *array, size_t size, int value)
 		{
 			return (low);
 		}
-		if (((array[low] <= value) && (array[jump] >= value)) || (((low == j) && (array[jump] <= value || array[jump] > value))))
+		if (((array[low] <= value) && (array[jump] >= value)) || (((low == j) && (array[jump] <= value || array[jump] >= value))))
 		{
 			int i = low;
 
