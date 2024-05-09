@@ -42,19 +42,9 @@ int jump_search(int *array, size_t size, int value)
 		}
 		if ((array[jump] == j) && (array[twice] <= value || array[twice] > value))
 		{
-			int i = jump + 1;
 			printf("Value checked array[%d] = [%d]\n", jump, array[jump]);
 			printf("Value found between indexes [%d] and [%d]\n", jump, twice);
 			printf("Value checked array[%d] = [%d]\n", jump, array[jump]);
-			while (i <= twice)
-			{
-				if (value < array[twice])
-				{
-					return (i);
-				}
-				i++;
-			}
-			return (-1);
 		}
 		low += sqrt(size);
 		jump += sqrt(size);
