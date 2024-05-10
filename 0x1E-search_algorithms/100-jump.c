@@ -22,7 +22,7 @@ int jump_search(int *array, size_t size, int value)
 		if (low <= j)
 		{
 			printf("Value checked array[%d] = [%d]\n", low, array[low]);
-			if (((array[low] <= value) && (array[jump] >= value)) || (((low == j) && (array[jump] <= value || array[jump] >= value))))
+			 if (((array[low] <= value) && (array[jump] >= value)) || (((low == j) && (array[jump] <= value || array[jump] >= value))))
 			{
 				int i = low;
 
