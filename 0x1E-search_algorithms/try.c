@@ -1,4 +1,5 @@
 #include "search_algos.h"
+
 /**
  * jump_search - jump algorithmn
  * @array: array parameter
@@ -18,38 +19,43 @@ int jump_search(int *array, size_t size, int value)
 	while (array[low] <= value && low < jump)
 	{
 		if (array[low] == value)
+                {
 			return (low);
+		}
 		if (low <= j)
 		{
 			printf("Value checked array[%d] = [%d]\n", low, array[low]);
-			if (((array[low] <= value) && (array[jump] >= value)) || (((low == j) && (array[jump] <= value || array[jump] >= value))))
+			if (array[low] <= value && array[jump] >= value)
 			{
 				int i = low;
 
 				printf("Value found between indexes [%d] and [%d]\n", low, jump);
 				while (i <= jump)
 				{
-					if (i <= j)
-						printf("Value checked array[%d] = [%d]\n", i, array[i]);
+					printf("Value checked array[%d] = [%d]\n", i, array[i]);
 					if (array[i] == value)
-						return (i);
+						return(i);
 					i++;
 				}
 			}
 		}
 		if (low > j)
 		{
+			printf("Value checked array[%d] = [%d]\n", low, array[low]);
 			if (array[low] <= value && array[jump] >= value)
 			{
 				int i = low;
 
+				printf("Value found between indexes [%d] and [%d]\n", low, jump);
+				
 				while (i <= jump)
 				{
+					printf("Value checked array[%d] = [%d]\n", i, array[i]);
 					if (array[i] == value)
-						return (-1);
-					i++;
-				}
-			}
+						return(-1);
+                                        i++;
+                                }
+                        }
 		}
 		low = jump;
 		jump += sqrt(size);
