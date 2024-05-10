@@ -1,4 +1,5 @@
 #include "main.h"
+#include "math.h"
 
 /**
  * main - finds the prime numbers
@@ -6,18 +7,25 @@
  *
  */
 
+void prime_number(long int n)
+{
+	/*long int largestprime;*/
+	long int j = 2;
+	long int k = sqrt(j);
+
+	while ((j <= n) && (j % k != 0))
+	{
+		while (n % j == 0)
+		{
+			n /= j;
+			printf("%ld %ld\n", j, n);
+		}
+		j++;
+	}
+}
+
 int main(void)
 {
-	long int n = 612852475143;
-	long int j;
-
-	while (j != n)
-	{
-		if (n % j == 0)
-			n = n / j;
-		else
-			j++;
-	}
-	printf("%ld\n", j);
+	prime_number(612852475143);
 	return (0);
 }
